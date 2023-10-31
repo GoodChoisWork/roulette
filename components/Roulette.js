@@ -11,7 +11,7 @@ import {
 } from "../utils/constants";
 import BettingBoard from "../components/BettingBoard";
 import { platform } from "../utils/constants";
-
+const height = Dimensions.get("window").height;
 const Roulette = ({ onResult }) => {
   const [isSpinning, setIsSpinning] = useState(false);
   const rotationValue = useRef(new Animated.Value(0)).current;
@@ -51,9 +51,10 @@ const Roulette = ({ onResult }) => {
 
   const arrowStyle = {
     position: "absolute",
-    top: Dimensions.get("window").height / (platform == "android" ? 9 : 50),
+    top: height / (height > 900 ? 15 : height < 840 ? 50 : 9),
     left: Dimensions.get("window").width / 2.07,
   };
+  console.log(Dimensions.get("window").height);
 
   function getRouletteNumber(randomAngle) {
     for (let i = 0; i < rouletteWheelValues.length; i++) {
