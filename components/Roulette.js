@@ -44,9 +44,11 @@ const Roulette = ({ onResult }) => {
 
   const arrowStyle = {
     position: "absolute",
-    top: "11.7%",
-    left: 200,
+    top: Dimensions.get("window").height / 9,
+    left: Dimensions.get("window").width / 2.07,
   };
+  console.log(Dimensions.get("window").width)
+  console.log(Dimensions.get("window").height)
 
   function getRouletteNumber(randomAngle) {
     for (let i = 0; i < rouletteWheelValues.length; i++) {
