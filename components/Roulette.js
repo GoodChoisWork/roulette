@@ -51,7 +51,7 @@ const Roulette = ({ onResult }) => {
 
   const arrowStyle = {
     position: "absolute",
-    top: Dimensions.get("window").height / (platform == 'android' ? 9 : 30 ),
+    top: Dimensions.get("window").height / (platform == 'android' ? 9 : 50),
     left: Dimensions.get("window").width / 2.07,
   };
 
