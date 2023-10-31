@@ -10,6 +10,7 @@ import {
   numbers1to18,
 } from "../utils/constants";
 import BettingBoard from "../components/BettingBoard";
+import { platform } from "../utils/constants";
 
 const Roulette = ({ onResult }) => {
   const [isSpinning, setIsSpinning] = useState(false);
@@ -50,7 +51,7 @@ const Roulette = ({ onResult }) => {
 
   const arrowStyle = {
     position: "absolute",
-    top: Dimensions.get("window").height / 50,
+    top: Dimensions.get("window").height / (platform == 'android' ? 9 : 30 ),
     left: Dimensions.get("window").width / 2.07,
   };
 
