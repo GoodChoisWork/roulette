@@ -66,7 +66,6 @@ const Roulette = ({ onResult }) => {
   }
 
   function checkBet(number) {
-    console.log(number);
     switch (bet) {
       case "red":
         return redNumbers.includes(number);
