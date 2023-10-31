@@ -51,7 +51,7 @@ const Roulette = ({ onResult }) => {
 
   const arrowStyle = {
     position: "absolute",
-    top: height / (height > 900 ? 15 : height < 840 ? 50 : 9),
+    top: height / (height > 900 ? 10.5 : height < 840 ? 50 : 9),
     left: Dimensions.get("window").width / 2.07,
   };
   console.log(Dimensions.get("window").height);
@@ -69,15 +69,15 @@ const Roulette = ({ onResult }) => {
   function checkBet(number) {
     switch (bet) {
       case "red":
-        return redNumbers.includes(number);
+        return { win: redNumbers.includes(number), number };
       case "black":
-        return blackNumbers.includes(number);
+        return { win: blackNumbers.includes(number), number };
       case "1-18":
-        return numbers1to18.includes(number);
+        return { win: numbers1to18.includes(number), number };
       case "19-36":
-        return numbers19to36.includes(number);
+        return { win: numbers19to36.includes(number), number };
       default:
-        return false;
+        return { win: false, number };
     }
   }
 
