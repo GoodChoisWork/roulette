@@ -2,7 +2,13 @@ import { View, Text, TouchableOpacity, Dimensions } from "react-native";
 import React, { useState, useRef } from "react";
 import { Image, StyleSheet, Animated, Easing } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { redNumbers, blackNumbers, rouletteWheelValues, numbers19to36, numbers1to18} from "../utils/constants";
+import {
+  redNumbers,
+  blackNumbers,
+  rouletteWheelValues,
+  numbers19to36,
+  numbers1to18,
+} from "../utils/constants";
 import BettingBoard from "../components/BettingBoard";
 
 const Roulette = ({ onResult }) => {
@@ -44,11 +50,9 @@ const Roulette = ({ onResult }) => {
 
   const arrowStyle = {
     position: "absolute",
-    top: Dimensions.get("window").height / 9,
+    top: Dimensions.get("window").height / 50,
     left: Dimensions.get("window").width / 2.07,
   };
-  console.log(Dimensions.get("window").width)
-  console.log(Dimensions.get("window").height)
 
   function getRouletteNumber(randomAngle) {
     for (let i = 0; i < rouletteWheelValues.length; i++) {
@@ -61,7 +65,7 @@ const Roulette = ({ onResult }) => {
   }
 
   function checkBet(number) {
-    console.log(number)
+    console.log(number);
     switch (bet) {
       case "red":
         return redNumbers.includes(number);
