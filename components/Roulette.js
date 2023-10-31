@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Dimensions } from "react-native";
 import React, { useState, useRef } from "react";
 import { Image, StyleSheet, Animated, Easing } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -44,7 +44,7 @@ const Roulette = ({ onResult }) => {
 
   const arrowStyle = {
     position: "absolute",
-    top: 95,
+    top: "11.7%",
     left: 200,
   };
 
