@@ -10,12 +10,10 @@ import {
   numbers1to18,
 } from "../utils/constants";
 import BettingBoard from "../components/BettingBoard";
-import { platform } from "../utils/constants";
 const height = Dimensions.get("window").height;
 const Roulette = ({ onResult }) => {
   const [isSpinning, setIsSpinning] = useState(false);
   const rotationValue = useRef(new Animated.Value(0)).current;
-  const [randomValue, setRandomValue] = useState(0);
   const [isBetNotPlaced, setIsBetPlaced] = useState(true);
   const [bet, setBet] = useState("");
 
