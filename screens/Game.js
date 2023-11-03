@@ -7,7 +7,13 @@ const Game = () => {
   const [result, setResult] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
   const handleRouletteResult = (value) => {
-    const result = value ? "You Win" : "You Lose";
+    const { win, number } = value;
+    let winnerMessage = "";
+    if (number === 0) {
+      return;
+    } else {
+      winnerMessage = win ? "You Win" : "You Lose";
+    }
     setResult(result);
     setModalVisible(true);
   };
