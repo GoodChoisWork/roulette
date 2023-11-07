@@ -10,6 +10,7 @@ import {
   numbers1to18,
 } from "../utils/constants";
 import BettingBoard from "../components/BettingBoard";
+import { platform } from "../utils/constants";
 const height = Dimensions.get("window").height;
 const Roulette = ({ onResult }) => {
   const [isSpinning, setIsSpinning] = useState(false);
@@ -19,7 +20,6 @@ const Roulette = ({ onResult }) => {
 
   const startSpin = () => {
     const randomAngle = Math.random() * 361;
-    setRandomValue(randomAngle);
 
     if (!isSpinning) {
       setIsSpinning(true);
@@ -88,7 +88,7 @@ const Roulette = ({ onResult }) => {
           style={[styles.image, spinStyle]}
         />
         <Image
-          source={require("../assets/arrowdown.png")} // Replace with the arrow image path
+          source={require("../assets/arrow.png")} // Replace with the arrow image path
           style={[styles.arrow, arrowStyle]}
         />
         <BettingBoard onBetPlaced={setIsBetPlaced} onBetSet={setBet} />
