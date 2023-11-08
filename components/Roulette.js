@@ -10,7 +10,6 @@ import {
   numbers1to18,
 } from "../utils/constants";
 import BettingBoard from "../components/BettingBoard";
-import { platform } from "../utils/constants";
 const height = Dimensions.get("window").height;
 const Roulette = ({ onResult }) => {
   const [isSpinning, setIsSpinning] = useState(false);
@@ -49,10 +48,9 @@ const Roulette = ({ onResult }) => {
 
   const arrowStyle = {
     position: "absolute",
-    top: height / (height > 900 ? 10.5 : height < 840 ? 50 : 9),
+    top: height / (height > 900 ? 10.5 : height > 860 ? 6.75 : height < 840 ? 50 : 9),
     left: Dimensions.get("window").width / 2.07,
   };
-  console.log(Dimensions.get("window").height);
 
   function getRouletteNumber(randomAngle) {
     for (let i = 0; i < rouletteWheelValues.length; i++) {
@@ -83,7 +81,7 @@ const Roulette = ({ onResult }) => {
     <SafeAreaView>
       <View style={styles.container}>
         <Animated.Image
-          source={require("../assets/roulette.png")}
+          source={require("../assets/roul-nobg.png")}
           resizeMode="contain"
           style={[styles.image, spinStyle]}
         />
@@ -119,6 +117,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: 'gray'
   },
   image: {
     width: 350,

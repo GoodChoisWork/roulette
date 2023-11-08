@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "newapp",
-    "slug": "newapp",
+    "slug": "roulette",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,16 +15,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.goodchois.work.roulette"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.goodchois.work.roulette"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6705ead2-144d-420c-9f52-ec366eb8107c"
+      }
+    },
+    "owner": "goodchois.work"
   }
 }

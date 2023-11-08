@@ -14,7 +14,7 @@ const Game = () => {
     } else {
       winnerMessage = win ? "You Win" : "You Lose";
     }
-    setResult(result);
+    setResult(winnerMessage);
     setModalVisible(true);
   };
   const toggleModal = () => {
