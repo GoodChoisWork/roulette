@@ -81,7 +81,7 @@ const Roulette = ({ onResult }) => {
     <SafeAreaView>
       <View style={styles.container}>
         <Animated.Image
-          source={require("../assets/roul-nobg.png")}
+          source={require("../assets/tabaluta.png")}
           resizeMode="contain"
           style={[styles.image, spinStyle]}
         />
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: 'gray'
+    backgroundColor: 'white'
   },
   image: {
     width: 350,
