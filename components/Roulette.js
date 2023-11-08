@@ -18,7 +18,7 @@ const Roulette = ({ onResult }) => {
   const [bet, setBet] = useState("");
 
   const startSpin = () => {
-    const randomAngle = Math.random() * 361;
+    const randomAngle = Math.floor(Math.random() * 361);
 
     if (!isSpinning) {
       setIsSpinning(true);
@@ -44,12 +44,6 @@ const Roulette = ({ onResult }) => {
 
   const spinStyle = {
     transform: [{ rotate: spinInterpolate }],
-  };
-
-  const arrowStyle = {
-    position: "absolute",
-    top: height / (height > 900 ? 10.5 : height > 860 ? 6.75 : height < 840 ? 50 : 9),
-    left: Dimensions.get("window").width / 2.07,
   };
 
   function getRouletteNumber(randomAngle) {
@@ -80,6 +74,7 @@ const Roulette = ({ onResult }) => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
+        <View style={styles.rouletteContainer}>
         <Animated.Image
           source={require("../assets/tabaluta.png")}
           resizeMode="contain"
@@ -87,8 +82,9 @@ const Roulette = ({ onResult }) => {
         />
         <Image
           source={require("../assets/arrow.png")} // Replace with the arrow image path
-          style={[styles.arrow, arrowStyle]}
+          style={[styles.arrow, styles.arrowStyle]}
         />
+        </View>
         <BettingBoard onBetPlaced={setIsBetPlaced} onBetSet={setBet} />
         <TouchableOpacity
           style={
@@ -141,6 +137,14 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderRadius: 10,
   },
+  rouletteContainer:{
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  arrowStyle : {
+    position: "absolute",
+    top: 0 
+ },
   spinningButtonText: {
     color: "gray",
     fontSize: 16,
