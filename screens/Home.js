@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Logo from "../components/Logo";
 const Home = ({navigation}) => {
   const navigateToScreen = (screenName) => {
     navigation.navigate(screenName);
@@ -8,6 +9,7 @@ const Home = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Logo />
       <View style={styles.centeredContainer}>
         <View style={styles.buttonContainer}>
           <View style={styles.button}>
@@ -35,16 +37,15 @@ const Home = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#45271e",
   },
   centeredContainer: {
-    flex: 1,
+    flex: 2,
     justifyContent: "center",
     alignItems: "center",
   },
   buttonContainer: {
     alignItems: "center",
-    marginTop: 20,
   },
   button: {
     backgroundColor: "#3f08a6",
@@ -52,11 +53,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 5,
     marginBottom: 30,
-    width: 150,
+    width: 200,
   },
   buttonText: {
     color: "white",
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
   },
