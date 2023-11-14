@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 const HowToPlay = () => {
   return (
     <SafeAreaView>
-      <Text>HowToPlay Choi</Text>
+      <Text>HowToPlay</Text>
     </SafeAreaView>
   )
 }
