@@ -1,11 +1,11 @@
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from "react-native-safe-area-context";
 const About = () => {
   return (
     <SafeAreaView>
       <View style={styles.flexTitle}>
-          <Text style={styles.title}>About</Text>
+          <Text style={styles.title}>About</Text>ed
         </View>
     </SafeAreaView>
   )
