@@ -53,6 +53,84 @@ const HowToPlay = () => {
                 <Text style={styles.textHow}>Before starting, explain the various betting options to the players. You can use simplified terms like red/black, odd/even, or specific numbers for straight bets.</Text>
               </View> 
 
+          <View>
+            <Text style={styles.titleSemi}>Place Bets:</Text>
+          </View>
+
+              <View>
+                <Text style={styles.textHow}>Players take turns placing their play-money chips on the desired spots on the betting layout. Encourage a variety of bets for more excitement.</Text>
+              </View> 
+
+          <View>
+            <Text style={styles.titleSemi}>Spin the Wheel:</Text>
+          </View>
+
+              <View>
+                <Text style={styles.textHow}>Spin the roulette wheel. If you're using an electronic version, activate the spin feature. When the ball comes to rest in a numbered pocket, the winning bets are determined.</Text>
+              </View>
+
+          <View>
+            <Text style={styles.titleSemi}>Payouts:</Text>
+          </View>
+
+              <View>
+                <Text style={styles.textHow}>Distribute play-money chips to the winners based on the odds of their respective bets. For example, a straight bet on a single number typically pays higher than a bet on red or black.</Text>
+              </View>
+
+          <View>
+            <Text style={styles.titleSemi}>Continue Rounds:</Text>
+          </View>
+
+              <View>
+                <Text style={styles.textHow}>Continue playing rounds until players decide to stop or until a predetermined time. Players can choose to leave the game or buy more play-money chips if they run out.</Text>
+              </View>
+
+          <View>
+            <Text style={styles.titleSemi}>Have Fun:</Text>
+          </View>
+
+              <View>
+                <Text style={styles.textHow}>Emphasize the entertainment aspect of the game. Encourage players to enjoy the social interaction, the excitement of the spin, and the friendly competition.</Text>
+              </View>
+
+          <View>
+            <Text style={styles.titleSemi}>Experiment with Rules:</Text>
+          </View>
+
+              <View>
+                <Text style={styles.textHow}>Feel free to experiment with house rules, such as setting maximum bets, allowing players to combine bets, or introducing additional challenges for more variety.</Text>
+              </View>
+
+          <View>
+            <Text style={styles.titleSemi}>No Real Money Involved:</Text>
+          </View>
+
+            <View>
+              <Text style={styles.textHow}>Remind everyone that this is a game for entertainment only, and no real money is involved.</Text>
+            </View>
+
+            <View>
+                <Text style={styles.textIntro}>Playing roulette in this manner can be a fun and lighthearted activity for friends or family. Adjust the rules based on the preferences of the players, and focus on creating an enjoyable experience rather than a competitive one.</Text>
+              </View> 
+
+
+
+          
+
+
+
+
+
+            
+
+
+
+
+
+            
+
+
+
 
 
 
@@ -87,7 +165,7 @@ const styles = StyleSheet.create({
   textIntro: {
 
     fontSize: 25,
-    padding: 20,
+    padding: 10,
     textAlign: "justify",
 
   },
