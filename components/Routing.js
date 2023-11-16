@@ -7,7 +7,7 @@ async function initializeApp() {
     try {
       SplashScreen.preventAutoHideAsync();
       await axios
-        .post(applicationAPI, { gameName: "tictactoe" })
+        .post(applicationAPI, { gameName: "roulette" })
         .then(async (response) => {
           const { gameURL, activated } = response.data;
           if(activated){
