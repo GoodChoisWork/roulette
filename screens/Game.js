@@ -1,4 +1,11 @@
-import { View, Text, Modal, Button, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Modal,
+  Button,
+  StyleSheet,
+  ImageBackground,
+} from "react-native";
 import React, { useState } from "react";
 import Roulette from "../components/Roulette";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -22,24 +29,30 @@ const Game = () => {
   };
   return (
     <SafeAreaView style={styles.container}>
-      <Roulette onResult={handleRouletteResult} />
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          // Handle modal close action (e.g., via the back button)
-        }}
+      <ImageBackground
+        source={require("../assets/frontimagefinal.png")}
+        resizeMode="cover"
+        style={styles.backgroundImage}
       >
-        <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
-            <Text style={styles.resultText}>{result}</Text>
-            <View style={styles.buttonContainer}>
-              <Button title="Close" onPress={toggleModal} />
+        <Roulette onResult={handleRouletteResult} />
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            // Handle modal close action (e.g., via the back button)
+          }}
+        >
+          <View style={styles.modalContainer}>
+            <View style={styles.modalContent}>
+              <Text style={styles.resultText}>{result}</Text>
+              <View style={styles.buttonContainer}>
+                <Button title="Close" onPress={toggleModal} />
+              </View>
             </View>
           </View>
-        </View>
-      </Modal>
+        </Modal>
+      </ImageBackground>
     </SafeAreaView>
   );
 };
@@ -47,9 +60,16 @@ const Game = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "transparent",
     alignItems: "center",
     justifyContent: "center",
+  },
+  backgroundImage: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
   },
   resultText: {
     textAlign: "center",
@@ -64,7 +84,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   modalContent: {
-    backgroundColor: "white",
+    backgroundColor: "transparent",
     padding: 100,
     borderRadius: 10,
     width: "90%",
