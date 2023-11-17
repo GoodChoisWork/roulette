@@ -76,7 +76,7 @@ const Roulette = ({ onResult }) => {
       <View style={styles.container}>
         <View style={styles.rouletteContainer}>
         <Animated.Image
-          source={require("../assets/tabaluta.png")}
+          source={require("../assets/spinner.png")}
           resizeMode="contain"
           style={[styles.image, spinStyle]}
         />
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: 'white'
+    backgroundColor: 'transparent'
   },
   image: {
     width: 350,

@@ -66,11 +66,11 @@ const styles = StyleSheet.create({
     width: 100,
     height: 50,
     borderWidth: 1,
-    borderColor: "black",
+    borderColor: "white",
     alignItems: "center",
     justifyContent: "center",
     margin: 5,
-    backgroundColor: "white",
+    backgroundColor: "#a99134",
     borderRadius: 5,
   },
   selectedBetButton: {
@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
   },
   betButtonText: {
     fontSize: 16,
+    color: 'white',
   },
 });
 

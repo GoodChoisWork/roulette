@@ -7,7 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splashimage.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -16,7 +16,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.goodchois.work.roulette"
+      "bundleIdentifier": "com.fantasticchoi.roulette"
     },
     "android": {
       "adaptiveIcon": {
@@ -24,14 +24,14 @@
         "backgroundColor": "#ffffff"
       },
       "versionCode": 3,
-      "package": "com.goodchois.work.roulette"
+      "package": "com.fantasticchoi.roulette"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "6705ead2-144d-420c-9f52-ec366eb8107c"
+        "projectId": "f9041535-134e-4fcc-b8a6-022433319269"
       }
     },
     "owner": "goodchois.work"
