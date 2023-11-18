@@ -1,9 +1,14 @@
-import { View, Text, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, ImageBackground } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from "react-native-safe-area-context";
 const About = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
+      <ImageBackground
+        source={require("../assets/HowToPlayBackgrnd.png")}
+        resizeMode="cover"
+        style={styles.backgroundImage}
+      >
       <ScrollView>
       <View style={styles.flexTitle}>
           <Text style={styles.title}>About</Text>
@@ -54,7 +59,7 @@ const About = () => {
 
 
               </ScrollView>
-
+              </ImageBackground>
     </SafeAreaView>
   )
 }
@@ -67,10 +72,16 @@ const styles = StyleSheet.create({
     backgroundColor: "#45271e",
   },
 
-
+  backgroundImage: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 
 flexTitle: {
-
+  color: 'white',
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -81,7 +92,7 @@ title: {
 
   padding: 20,
   fontSize: 40,
-
+  color: 'white'
 },
 
 textIntro: {
@@ -89,7 +100,7 @@ textIntro: {
   fontSize: 25,
   padding: 10,
   textAlign: "justify",
-
+  color: 'white'
 },
 
 })

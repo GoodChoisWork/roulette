@@ -1,9 +1,14 @@
-import { View, Text, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, ImageBackground } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from "react-native-safe-area-context";
 const HowToPlay = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
+      <ImageBackground
+        source={require("../assets/HowToPlayBackgrnd.png")}
+        resizeMode="cover"
+        style={styles.backgroundImage}
+      >
       <ScrollView>
         <View style={styles.flexTitle}>
           <Text style={styles.title}>How To Play</Text>
@@ -136,7 +141,7 @@ const HowToPlay = () => {
 
 
         </ScrollView>
-
+        </ImageBackground>
     </SafeAreaView>
   )
 }
@@ -146,7 +151,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#45271e",
   },
-
+  backgroundImage: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   flexTitle: {
 
     display: "flex",
@@ -159,7 +170,7 @@ const styles = StyleSheet.create({
 
     padding: 20,
     fontSize: 40,
-
+    color: 'white'
   },
 
   textIntro: {
@@ -167,7 +178,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     padding: 10,
     textAlign: "justify",
-
+    color: 'white'
   },
 
   textNumberings: {
@@ -176,7 +187,7 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     paddingBottom: 10,
     textAlign: "justify",
-
+    color: 'white'
   },
 
   textNumberings1: {
@@ -186,13 +197,13 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     paddingTop: 20,
     textAlign: "justify",
-
+    color: 'white'
   },
 
   titleSemi:{
     fontSize: 30,
     paddingLeft: 10,
-
+    color: 'white'
   },
 
   textHow:{
@@ -202,7 +213,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     paddingTop: 10,
     textAlign: "justify",
-
+    color: 'white'
   }
 })
 export default HowToPlay
