@@ -76,7 +76,7 @@ const Roulette = ({ onResult }) => {
       <View style={styles.container}>
         <View style={styles.rouletteContainer}>
         <Animated.Image
-          source={require("../assets/spinner.png")}
+          source={require("../assets/spinnerblue.png")}
           resizeMode="contain"
           style={[styles.image, spinStyle]}
         />

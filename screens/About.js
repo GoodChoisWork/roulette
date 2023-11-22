@@ -15,11 +15,11 @@ const About = () => {
         </View>
 
               <View>
-                <Text style={styles.textIntro}>Welcome to Roulette Entertainment Games, where the thrill of the spin meets the joy of casual gaming!</Text>
+                <Text style={styles.textIntro}>Welcome to Roulette Gaming Oasis, where the thrill of the spin meets the joy of casual gaming!</Text>
               </View>
 
               <View>
-                <Text style={styles.textIntro}>At Roulette Entertainment Games, we believe that everyone deserves a chance to 
+                <Text style={styles.textIntro}>At Roulette Gaming Oasis, we believe that everyone deserves a chance to 
                 experience the excitement of roulette without the pressure of monetary stakes. Our mission is to provide a 
                 fun and engaging platform where players can enjoy the classic game of roulette purely for entertainment.</Text>
               </View>
@@ -53,7 +53,7 @@ const About = () => {
 
               <View>
                 <Text style={styles.textIntro}>Thank you for being a part of our gaming community. 
-                Let the virtual wheel spin, and may every game with Roulette Entertainment Games 
+                Let the virtual wheel spin, and may every game with Roulette Gaming Oasis 
                 be a source of joy and amusement!</Text>
               </View>
 

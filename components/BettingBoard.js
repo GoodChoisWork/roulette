@@ -5,7 +5,7 @@ const BettingBoard = ({ onBetPlaced, onBetSet }) => {
   const [selectedBet, setSelectedBet] = useState(null);
 
   const betTypes = [
-    { label: "Red", value: "red" },
+    { label: "Blue", value: "red" },
     { label: "Black", value: "black" },
     { label: "Odd", value: "odd" },
     { label: "Even", value: "even" },
